@@ -3,7 +3,8 @@ import numpy
 import os
 import urllib
 import gzip
-import _Pickle as pickle
+import six 
+from six.moves import cPickle as pickle
 
 def mnist_generator(data, batch_size, n_labelled, limit=None):
     images, targets = data
